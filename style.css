@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.iamabdil {
+  display: none;
+}
+
+.header {
+  margin: 0.9375em 1.875em 0 1.875em;
+}
+
+.header h1 {
+  font-size: 1.488em;
+  margin: 0 0 0.625em 0;
+  color: white;
+}
+
+.header p {
+  font-size: 1.125em;
+}
+
+span {
+  position: relative;
+}
+
+span:before {
+  position: absolute;
+  content: "";
+  height: 1em;
+  width: 100%;
+  bottom: 0em;
+  z-index: -1;
+  background: black;
+}
+
+ul.nav {
+  list-style-type: none;
+  margin: 0.9375em;
+  padding: 0;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 0.875em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav li {
+  display: inline;
+  margin: 0.625em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: #a4a4a4;
+}
+
+.memoji {
+  width: 9.375em;
+  height: auto;
+  padding: 0;
+}
+
+.blog-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-container {
+  border-radius: 1.25em;
+  width: 293px;
+  height: auto;
+  font-family: "Roboto", sans-serif;
+  margin: 0 0 30px 0;
+}
+
+.blog-img-container {
+  background-color: black;
+  height: 200px;
+  border-radius: 0.625em 0.625em 0px 0px;
+  font-family: "Roboto", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 90%;
+  max-height: auto;
+  justify-content: center;
+}
+
+.img-div img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.blog-text-container {
+  height: 110px;
+  background-color: white;
+  border-radius: 0px 0px 0.625em 0.625em;
+  border: black 1px solid;
+  font-family: "Roboto", sans-serif;
+  padding: 0.9375em;
+}
+
+.headlines {
+  font-size: 1.25em;
+  margin: 0.3125em 0 0.3125em 0;
+}
+
+.card-tags {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-tags li {
+  /* background-color: black;
+  color: white; */
+  color: rgba(117, 117, 117, 1);
+  padding: 0.3125em 0.625em 0.3125em 0px;
+  margin: 0;
+  border-radius: 0.9375em;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+ul.card-tags {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.875em;
+}
+
+.coming-soon h1 {
+  font-size: 1.875em;
+}
+
+/* */
+.show-modal {
+  color: #a4a4a4;
+}
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  font-size: 2.5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 0.625em;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.modal-margin {
+  margin: 0.6em 0 0.6em 0;
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 950px) {
+  .memoji {
+    display: none;
+  }
+
+  .bio h2 {
+    display: none;
+  }
+
+  .bio p {
+    display: none;
+  }
+
+  .header h1 {
+    display: none;
+  }
+
+  .iamabdil {
+    display: block;
+  }
+
+  .blog-section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto 1fr 1fr 1fr auto;
+    grid-template-areas:
+      ". a b c ."
+      ". d e f ."
+      ". g h i ."
+      ". j k l .";
+    grid-gap: 1.25em;
+  }
+
+  .pill-1 {
+    grid-area: a;
+  }
+
+  .pill-2 {
+    grid-area: b;
+  }
+
+  .pill-3 {
+    grid-area: c;
+  }
+
+  .pill-4 {
+    grid-area: d;
+  }
+
+  .pill-5 {
+    grid-area: e;
+  }
+
+  .pill-6 {
+    grid-area: f;
+  }
+
+  .pill-7 {
+    grid-area: g;
+  }
+
+  .pill-8 {
+    grid-area: h;
+  }
+
+  .pill-9 {
+    grid-area: i;
+  }
+
+  .pill-10 {
+    grid-area: j;
+  }
+
+  .pill-11 {
+    grid-area: k;
+  }
+
+  .pill-12 {
+    grid-area: l;
+  }
+
+  .blog-container {
+    margin: 0 0 1.2em 0;
+  }
+
+  .first-page {
+    width: 60%;
+    margin-left: 6em;
+    height: 100vh;
+    position: relative;
+  }
+
+  .header {
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .header h1 {
+    margin-top: 0;
+    font-size: 3em;
+  }
+
+  .iamabdil {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+  }
+
+  #byline {
+    font-size: 2.4em;
+    margin-bottom: 0.5em;
+    font-family: "Montserrat";
+    font-weight: bold;
+  }
+
+  span {
+    position: relative;
+  }
+
+  span:before {
+    position: absolute;
+    content: "";
+    height: 0.4em;
+    width: 70%;
+    bottom: 0em;
+    z-index: -1;
+    background: #2d74fe;
+  }
+
+  .header h1 {
+    color: black;
+  }
+
+  ul.nav {
+    margin: 0 0.9375em 0.9375em 0.9375em;
+  }
+
+  /* */
+  .show-modal {
+    color: #a4a4a4;
+  }
+  .close-modal {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    font-size: 5rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+
+  /* CLASSES TO MAKE MODAL WORK */
+  .hidden {
+    display: none;
+  }
+
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+
+    background-color: white;
+    padding: 3rem;
+    border-radius: 0.625em;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+  }
+}
